@@ -9,7 +9,7 @@ function count(){
     return Inc;
 }
 
-var counter = count();
+var counter1 = count();
 alert(count());
 alert(count());
 alert(count());
@@ -17,21 +17,21 @@ alert(count());
 
 
 // Question no.2
-let count = 0;
+let count1 = 0;
 (function immediate() {
-  if (count == 0) 
+  if (count1 == 0) 
   {
-    let count = 1;
-    console.log(count); 
+    let count1 = 1;
+    console.log(count1); 
   }
-  console.log(count);
+  console.log(count1);
 })();
 //output is  1 0
 
 //Question no. 3
 
 for (var i = 0; i < 3; i++) {
-    setTimeout(function log() {
+    setTimeout(function show() {
       console.log(i);
     }, 1000);
   }
@@ -56,7 +56,7 @@ var x = (function () {
 x();
 
 //Question no. 6
-var globalvar = "xyz";
+var globalVar = "xyz";
 
 (function outerFunc(outerArg) {
     var outerVar = 'a';
@@ -64,15 +64,15 @@ var globalvar = "xyz";
     (function innerFunc(innerArg) {
     var innerVar = 'b';
     
-    console.log(`
-        outerArg = ${outerVar} 
-        innerArg = ${innerVar} 
-        outerVar = ${outerVar}
-        innerVar = ${innerVar}
-        globalVar = ${globalVar}`);
+    console.log(
+        "outerArg = " + outerArg + "\n" +
+        "innerArg = " + innerArg + "\n" +
+        "outerVar = " + outerVar + "\n" +
+        "innerVar = " + innerVar + "\n" +
+        "globalVar = " + globalVar);
     
-    })(849);
-})(423);
+    })(456);
+})(123);
 
 
 //Question.6 Write a code to calculate area of a rectangle using inner function. In this case outer function should accept parameter length and inner function should accept parameter breadth.
@@ -94,7 +94,7 @@ let outer = function(){
     }
 }
 
-outer();
+outer();//output 0
 inner();//output 1
 inner();//output 2
 inner();//output 3
